@@ -12,5 +12,9 @@ MCP Portal（社内スキルポータル）のライセンス判定を確かめ�
 | `skills/readme-only` | README にだけ MIT | 運営の確認待ち |
 | `skills/conflict` | LICENSE は Apache-2.0・frontmatter は MIT | 運営の確認待ち（食い違い） |
 | `apache-tree/skills/inherits` | 上位フォルダに Apache-2.0 の LICENSE | 許容（上位フォルダから取り込む） |
+| `skills/spdx-conflict` | LICENSE は MIT・frontmatter は `CC-BY-NC-SA-4.0` | 運営の確認待ち（食い違い） |
+| `apache-tree/skills/spdx-declared` | 上位フォルダに Apache-2.0 の LICENSE・frontmatter は `CC-BY-NC-SA-4.0` | 許容外で投稿できない（frontmatter が上位フォルダより優先） |
+
+`spdx-` の 2 つは、SPDX 判定漏れの修正が入った環境で期待どおりになります。修正前の環境では、どちらも LICENSE の判定で許容になります。
 
 リポジトリのルートには LICENSE を置いていません。置くと全フォルダが継いでしまい、表記なしの fixture が成立しません。
